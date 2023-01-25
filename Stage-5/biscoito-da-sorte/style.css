@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Dancing+Script&family=Montserrat:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    color: #34355B;;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen-one {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    width: 42.8rem;
+    height: 42.4rem;
+    margin-top: -10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.screen-one h1 {
+    width: 25.85rem;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+}
+
+.screen-one p {
+    font-family: 'DM Sans';
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.screen-one img {
+    width: 26.4rem;
+    height: 20rem;
+    cursor: pointer;
+}
+
+.screen-one img:hover {
+    animation: shake-cookie 0.5s infinite;
+}
+
+.screen-two {
+    width: 42.8rem;
+    height: 56.4rem;
+    background: #FFFFFF;
+    box-shadow: 0 2.0rem 5.0rem rgba(0, 0, 0, 0.8);
+    border-radius: .5rem;
+}
+
+.screen-two .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4.8rem 6.4rem;
+    gap: 1rem;
+}
+
+.screen-two h1 {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.screen-two .message-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+    width: 29.3rem;
+    height: 10.7rem;
+    background: #E4EDF1;
+    box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.5);
+    animation: move-message 3000ms backwards;
+}
+
+.screen-two #message {
+    font-family: 'Dancing Script';
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+    padding: 1rem;
+    color: #000000;
+}
+
+.screen-two img {
+    width: 30rem;
+    height: 20rem;
+}
+
+button {
+    padding: 1.6rem;
+    gap: 1rem;
+    width: 17.4rem;
+    height: 5.2rem;
+    border: none;
+    background: #FF9500;
+    border-radius: .4rem;
+    font-family: 'DM Sans';
+    font-weight: 70rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #e88803;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes shake-cookie {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+    10% {
+        transform: translateY(-2px) rotate(-2deg);
+    }
+
+    20% {
+        transform: translateX(-4px) rotate(-4deg);
+    }
+
+    30% {
+        transform: translateY(-2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translateX(-2px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-2px) rotate(-2deg);
+    }
+
+    60% {
+        transform: translateX(4px) rotate(0deg);
+    }
+
+    70% {
+        transform: translateY(-2px) rotate(-2deg);
+    }
+
+    80% {
+        transform: translateX(2px) rotate(2deg);
+    }
+
+    90% {
+        transform: translateY(-2px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+}
+
+@keyframes move-message {
+    0% {
+        transform: translateY(150px) scale(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

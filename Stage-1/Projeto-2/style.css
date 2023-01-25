@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Mulish&display=swap');
+
+body {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(227, 255, 248, 0.38) 100%);
+    min-height: 100vh;
+}
+
+.page {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 1005px;
+    margin: auto;
+}
+
+nav ul {
+    width: 267px;
+    display: flex;
+    flex-direction: row;
+    gap: 46px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #7D7987;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 433.64px;
+    margin: 50px auto 140.36px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main p {
+    font-size: 14px;
+    line-height: 28px;
+    color: #7D7987;
+    margin: 40px 0;
+}
+
+section {
+    width: 489px;
+    height: 332px;
+    text-align: left;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 32px 15px;
+    gap: 10px;
+    background-color: #69B99D;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    transition: 0.5s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #58ad8f;
+    transition: 0.5s;
+}
+
+main h1 {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 56px;
+}
+
+#right {
+    margin-left: 153px;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    margin-top: 80px;
+}
+
+#balls {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+span {
+    color: #89C5CC
+}

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+:root {
+    font-size: 62.5%;
+    --bg-color-light: white;
+    --font-color-light: #29292E;
+    --button-color-dark: #E1E1E6;
+    --pressbutton-color-dark: #02799D;
+    --button-hover: #29292e4a;
+}
+
+body {
+    background-color: var(--bg-color-light);
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--font-color-light);
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19.2rem;
+    margin-top: 15rem;
+}
+
+#timer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+
+#timer span {
+    font-size: 12.6rem;
+    line-height: 14.8rem;
+
+    text-align: center;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+#controls button {
+    background-color: transparent;
+    border: none;
+    width: 4.8rem;
+    height: 4.8rem;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+#controls button:hover {
+    transform: scale(1.1);
+}
+
+#controls button img {
+    width: 48px;
+    height: 48px;
+}
+
+#cards {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-areas: 
+    'A B'
+    'C D';
+}
+
+.tree {
+    grid-area: A;
+}
+
+.cloud {
+    grid-area: B;
+}
+
+.coffee {
+    grid-area: C;
+}
+
+.fire {
+    grid-area: D;
+}
+
+#cards button {
+    background: var(--button-color-dark);
+    border-radius: 24px;
+    border: none;
+    padding: 4.7rem;
+    transition: .3s;
+}
+
+#cards button:hover {
+    background-color: var(--button-hover);
+    cursor: pointer;
+}
+
+#cards  button.active {
+    background-color: var(--pressbutton-color-dark);
+}
+
+#cards button.active svg path {
+    fill: #fff;
+}

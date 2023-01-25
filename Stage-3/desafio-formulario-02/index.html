@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário 02</title>
+</head>
+<body>
+    <header>
+        <h1>Avalie a sua mentoria</h1>
+        <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+        <img src="img1.png" alt="Estrelas de avaliação">
+
+        <div class="top">
+            <h2>Informações pessoais</h2>
+        </div>
+    </header>
+
+    <form id="my-form">
+        <fieldset>
+            <div class="name-surname">
+                <div class="input-wrapper">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="surname">Sobrenome</label>
+                    <input type="text" id="surname">
+                </div>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="email">E-mail <span>(digite um e-mail válido)</span></label>
+                <input type="email" id="email">
+           </div>
+        </fieldset>
+
+        <fieldset>
+            <div class="fieldset-wrapper">
+                <legend>Informações do mentor</legend>
+
+                <div class="input-wrapper">
+                    <label for="mentor-name">Selecione quem foi o seu mentor</label>
+                    <select name="mentor-name" id="mentor-name">
+                        <option disabled selected data-default>Selecione</option>
+                        <option value="Monica">Monica</option>
+                        <option value="Chandler">Chandler</option>
+                        <option value="Ross">Ross</option>
+                        <option value="Rachel">Rachel</option>
+                        <option value="Phoebe">Phoebe</option>
+                        <option value="Joe">Joe</option>
+                    </select>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="feedback">Feedback sobre o mentor</label>
+                    <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" name="confirm-info" id="confirm-info"> Todas as minhas dúvidas foram esclarecidas durante a mentoria.
+                </div>                
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div class="fieldset-wrapper">
+                <legend>Agendando próxima mentoria</legend>
+            </div>
+
+            <div class="time-and-date">
+                <div class="input-wrapper">
+                    <label for="date">Data <span>(DD/MM/AAAA)</span></label>
+                    <input type="date" name="date" id="date">
+                </div>
+
+                <div class="time">
+                    <div class="input-wrapper">
+                        <label for="time-begin">Das</label>
+                        <input type="time" name="time-begin" id="time-begin">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="time-end">Até</label>
+                        <input type="time" name="time-end" id="time-end">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="button">
+            <input type="button" value="Salvar" id="button-send">
+        </div>
+    </form>
+</body>
+</html>
