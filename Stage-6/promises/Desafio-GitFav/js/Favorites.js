@@ -1,5 +1,3 @@
-//classe com a lógica dos dados
-//como os dados serão estruturados
 import { GithubUser } from "./GithubUser.js"
 
 export class Favorites {
@@ -45,6 +43,7 @@ export class Favorites {
         this.entries = filteredEntries
         this.update()
         this.save()
+        this.showEmptyContainer()
     }
 }
 
@@ -66,10 +65,13 @@ export class FavoritesView extends Favorites {
 
             this.add(value)
         }
+        
     }
 
     update() {
         this.removeAllTr()
+        this.showEmptyContainer()
+        const input = document.querySelector('.search input')
 
         this.entries.forEach( user => {
             const row = this.createRow()
@@ -90,6 +92,7 @@ export class FavoritesView extends Favorites {
             }
 
             this.tbody.append(row)
+            input.value = ''
         })
     }    
 
@@ -98,18 +101,14 @@ export class FavoritesView extends Favorites {
 
         tr.innerHTML = `
             <td class="user">
-                <img src="https://github.com/maykbrito.png" alt="Imagem de Mayk Brito">
-                <a href="https://github.com/maykbrito" target="_blank">
-                    <p>Mayk Brito</p>
-                    <span>/maykbrito</span>
+                <img src="" alt="">
+                <a href="" target="_blank">
+                    <p></p>
+                    <span></span>
                 </a>
             </td>
-            <td class="repositories">
-                76
-            </td>
-            <td class="followers">
-                2360
-            </td>
+            <td class="repositories"></td>
+            <td class="followers"></td>
             <td>
                 <button class="remove">Remover</button>
             </td>
@@ -122,5 +121,14 @@ export class FavoritesView extends Favorites {
         .forEach((tr) => {
             tr.remove()
         })
+    }
+
+    showEmptyContainer() {
+        const empty = document.querySelector('.empty')
+        if(this.entries.length == 0) {
+            empty.id = ''
+        } else {
+            empty.id = 'hide'
+        }
     }
 }
