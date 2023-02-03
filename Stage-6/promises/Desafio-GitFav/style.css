@@ -105,16 +105,19 @@ table * {
 
 table thead th {
     background-color: #092D38;
-    padding: 1.6rem 2.4rem 1.6rem 4rem;
+    padding: 1.6rem 2.4rem 1.6rem 0rem;
+    text-align: left;
 }
 
-table thead tr:first-child {
-    max-width: 500px;
+table thead th:first-child {
+    padding-left: 4rem;
 }
+
 
 table tbody tr:nth-child(odd) {
     background-color: rgba(6, 22, 27, 0.5);
 }
+
 
 table tbody tr {
     background-color: #06181C;
@@ -126,7 +129,6 @@ table tbody tr {
 
 td.user {
     display: flex;
-    width: 500px;
     padding: 2.4rem 4rem;
     gap: 1.6rem;
     align-items: center;
@@ -151,7 +153,7 @@ td.user a p {
 }
 
 .repositories, .followers, .remove {
-    padding: 1.6rem 2.4rem 1.6rem 4rem;
+    padding: 1.6rem 2.4rem 1.6rem 0rem;
 }
 
 button.remove {
