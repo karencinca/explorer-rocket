@@ -127,6 +127,11 @@ body {
     border: none;
     padding: 4.7rem;
     transition: .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
 }
 
 #cards button:hover {
@@ -145,6 +150,40 @@ body {
 #cards button.active svg path {
     fill: #fff;
 }
+
+
+
+.card-sounds input[type="range"] {
+    width: 100%;
+    max-width: 9rem;
+    height: 0.5rem;
+    appearance: none;
+    display: block;
+    background-color: var(--gray-color);
+    border-radius: 1rem;
+  }
+  
+  .card-sounds input[type="range"]::-webkit-slider-thumb {
+    display: block;
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--gray-color);
+  }
+  
+  .card-sounds .tree.active input[type="range"],
+  .card-sounds .tree.active input[type="range"]::-webkit-slider-thumb,
+  .card-sounds .rain.active input[type="range"],
+  .card-sounds .rain.active input[type="range"]::-webkit-slider-thumb,
+  .card-sounds .home.active input[type="range"],
+  .card-sounds .home.active input[type="range"]::-webkit-slider-thumb,
+  .card-sounds .fire.active input[type="range"],
+  .card-sounds .fire.active input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--white);
+  }
+
+
 
 @media (max-width: 950px) {
     .container {

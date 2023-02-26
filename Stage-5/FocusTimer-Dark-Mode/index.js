@@ -17,7 +17,6 @@ let timerTimeOut
     buttonPause.classList.add('hide')
     buttonPlay.classList.remove('hide')
     resetTimer()
-
  })
 
  buttonPause.addEventListener('click', () => {
@@ -112,6 +111,35 @@ const coffeeAudio = new Audio("./assets/Cafeteria.wav")
 const fireAudio = new Audio("./assets/Lareira.wav")
 let isPlaying = false
 
+const inputTree = document.querySelector("#vol-sound-tree");
+const inputCloud = document.querySelector("#vol-sound-cloud");
+const inputCoffee = document.querySelector("#vol-sound-coffee");
+const inputFire = document.querySelector("#vol-sound-fire");
+
+
+function setAudioVolume() {
+    treeAudio.volume = inputTree.value;
+    cloudAudio.volume = inputCloud.value;
+    coffeeAudio.volume = inputCoffee.value;
+    fireAudio.volume = inputFire.value;
+  }
+
+
+inputTree.addEventListener('input', () => {
+    setAudioVolume()
+})
+
+inputCloud.addEventListener('input', () => {
+    setAudioVolume()
+})
+
+inputCoffee.addEventListener('input', () => {
+    setAudioVolume()
+})
+
+inputFire.addEventListener('input', () => {
+    setAudioVolume()
+})
 
 buttonTreeSound.addEventListener('click', () => {
     addActive(buttonTreeSound)
