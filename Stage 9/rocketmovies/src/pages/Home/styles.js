@@ -30,7 +30,8 @@ export const ContentTitle = styled.div`
 
 export const Content = styled.div`
     grid-area: content;
-    padding: 0 123px;
+    margin: 0 123px;
+    padding-right: 8px;
     overflow-y: auto;
 `
 

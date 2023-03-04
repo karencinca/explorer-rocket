@@ -3,6 +3,7 @@ import { BsPlusLg } from 'react-icons/bs'
 import { Button } from "../../components/Button"
 import { Header } from "../../components/Header"
 import { Movie } from '../../components/Movie'
+import { Tag } from '../../components/Tag'
 
 export function Home() {
     return (
@@ -14,8 +15,7 @@ export function Home() {
                 <Button 
                     icon={BsPlusLg}
                     title="Adicionar filme"
-                />
-            
+                />          
             </ContentTitle>
             <Content>
                 <Movie title="Interestellar" />
