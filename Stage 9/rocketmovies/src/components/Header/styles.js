@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.header`
     grid-area: header;
@@ -16,19 +17,21 @@ export const Container = styled.header`
     
     padding: 0 123px;
 
-    > span {
+    .logo {
         font-weight: 700;
         font-size: 24px;
         line-height: 32px;
         color: ${({ theme }) => theme.COLORS.PINK};
+        cursor: default;
     }
+
 
     > .inputbar {
         width: 630px;
     }
 `
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
     display: flex;
     align-items: center;
 
@@ -42,8 +45,9 @@ export const Profile = styled.div`
             font-size: 14px;
         }
 
-        > p {
+        > .name {
             font-weight: 700;
+            color: ${({ theme }) => theme.COLORS.WHITE};
         }
 
         > span {

@@ -7,4 +7,6 @@ export const Container = styled.button`
     display: flex;
     align-items: center;
     gap: 8px;
+    margin: 40px 0;
+    grid-area: goback;
 `

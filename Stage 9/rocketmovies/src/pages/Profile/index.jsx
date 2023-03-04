@@ -5,15 +5,18 @@ import { Input } from '../../components/Input'
 import { BsArrowLeft } from 'react-icons/bs'
 import { FiUser } from 'react-icons/fi'
 import { FiCamera, FiMail, FiLock } from 'react-icons/fi'
+import { Link } from 'react-router-dom' 
 
 export function Profile() {
     return (
         <Container>
             <header>
-                <ButtonText 
-                    icon={BsArrowLeft}
-                    title="Voltar"
-                />
+                <Link to="/">
+                    <ButtonText 
+                        icon={BsArrowLeft}
+                        title="Voltar"
+                    />
+                </Link>
             </header>
 
             <Form>

@@ -1,9 +1,9 @@
 import { Container, Content, ContentTitle } from "./styles"
+import { Link } from 'react-router-dom'
 import { BsPlusLg } from 'react-icons/bs'
 import { Button } from "../../components/Button"
 import { Header } from "../../components/Header"
 import { Movie } from '../../components/Movie'
-// import { Tag } from '../../components/Tag'
 
 export function Home() {
     return (
@@ -12,10 +12,13 @@ export function Home() {
 
             <ContentTitle>
                 <span>Meus filmes</span>
-                <Button 
-                    icon={BsPlusLg}
-                    title="Adicionar filme"
-                />          
+                <Link to="createmovie">
+                    <Button 
+                        icon={BsPlusLg}
+                        title="Adicionar filme"
+                    />          
+                </Link>
+
             </ContentTitle>
             <Content>
                 <Movie data={{
@@ -27,17 +30,17 @@ export function Home() {
                 />
 
                 <Movie data={{
-                    title: 'The last song',
+                    title: 'Interestellar',
                     tags: [
-                        {id: '2', name: 'Romance'},
+                        {id: '2', name: 'Ficção científica'},
                     ]
                 }}
                 />
 
                 <Movie data={{
-                    title: 'Extraordinário',
+                    title: 'Interestellar',
                     tags: [
-                        {id: '3', name: 'Drama'},
+                        {id: '3', name: 'Ficção científica'},
                     ]
                 }}
                 />

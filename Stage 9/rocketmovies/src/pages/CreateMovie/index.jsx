@@ -13,7 +13,7 @@ export function CreateMovie() {
         <Container>
             <Header />
 
-            <GoBack>
+            <GoBack to="/">
                 <ButtonText
                     icon={BsArrowLeft}
                     title="Voltar"

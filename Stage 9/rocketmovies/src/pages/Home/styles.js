@@ -23,7 +23,7 @@ export const ContentTitle = styled.div`
         font-size: 32px;
     }
 
-    > Button {
+    Button {
         width: 207px;
     }
 `
@@ -33,5 +33,9 @@ export const Content = styled.div`
     margin: 0 123px;
     padding-right: 8px;
     overflow-y: auto;
+
+    :last-child {
+        margin-bottom: 50px;
+    }
 `
 

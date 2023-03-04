@@ -5,12 +5,23 @@ export const Container = styled.div`
     border-radius: 16px;
     padding: 32px;
     margin-bottom: 24px;
+    width: 100%;
 
-    > h3 {
+
+    .title {
         font-weight: 700;
         font-size: 24px;
         line-height: 32px;
+        color: ${({ theme }) => theme.COLORS.WHITE};
     }
+
+    > p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: ${({ theme }) => theme.COLORS.GRAY_200};
+    }
+
 `
 
 export const Stars = styled.div`

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
     width: 100%;
@@ -11,7 +12,7 @@ export const Container = styled.div`
     "content";
 `
 
-export const GoBack = styled.div`
+export const GoBack = styled(Link)`
     grid-area: goback;
     margin: 40px 123px;
     display: flex;
@@ -69,5 +70,8 @@ export const Content = styled.div`
         }
     }
 
+    :last-child {
+        margin-bottom: 50px;
+    }
 
 `
