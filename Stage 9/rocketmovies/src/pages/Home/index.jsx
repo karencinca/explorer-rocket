@@ -3,7 +3,7 @@ import { BsPlusLg } from 'react-icons/bs'
 import { Button } from "../../components/Button"
 import { Header } from "../../components/Header"
 import { Movie } from '../../components/Movie'
-import { Tag } from '../../components/Tag'
+// import { Tag } from '../../components/Tag'
 
 export function Home() {
     return (
@@ -18,13 +18,29 @@ export function Home() {
                 />          
             </ContentTitle>
             <Content>
-                <Movie title="Interestellar" />
-                <Movie title="The fault in our stars" />
-                <Movie title="The last of us" />
-                <Movie title="Grey's Anatomy" />
-                <Movie title="Stranger Things" />
-                <Movie title="Friends" />
-                <Movie title="Suits" />
+                <Movie data={{
+                    title: 'Interestellar',
+                    tags: [
+                        {id: '1', name: 'Ficção científica'},
+                    ]
+                }}
+                />
+
+                <Movie data={{
+                    title: 'The last song',
+                    tags: [
+                        {id: '2', name: 'Romance'},
+                    ]
+                }}
+                />
+
+                <Movie data={{
+                    title: 'Extraordinário',
+                    tags: [
+                        {id: '3', name: 'Drama'},
+                    ]
+                }}
+                />
             </Content>
         </Container>
     )

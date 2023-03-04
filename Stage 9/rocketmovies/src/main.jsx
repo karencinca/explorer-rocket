@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client'
 import { ThemeProvider } from 'styled-components'
 import theme from './styles/theme'
 
-import { Profile } from './pages/Profile'
+import { CreateMovie } from './pages/CreateMovie'
 import GlobalStyles from './styles/global'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Profile />
+      <CreateMovie />
     </ThemeProvider>
   </React.StrictMode>
 )

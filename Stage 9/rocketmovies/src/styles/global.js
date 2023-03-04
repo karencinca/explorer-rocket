@@ -32,7 +32,7 @@ export default createGlobalStyle`
     }
 
     *::-webkit-scrollbar {
-        width: 12px;
+        width: 8px;
         margin-right: 10px;
     }
 
