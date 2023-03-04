@@ -5,7 +5,6 @@ export const Container = styled.button`
     height: 48px;
     background-color: ${({ theme }) => theme.COLORS.PINK};
     color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-    padding: 32px;
 
     display: flex;
     align-items: center;

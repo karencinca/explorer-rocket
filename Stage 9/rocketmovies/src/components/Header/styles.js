@@ -22,6 +22,10 @@ export const Container = styled.header`
         line-height: 32px;
         color: ${({ theme }) => theme.COLORS.PINK};
     }
+
+    > .inputbar {
+        width: 630px;
+    }
 `
 
 export const Profile = styled.div`
