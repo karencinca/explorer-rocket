@@ -25,6 +25,7 @@ export function Home() {
                     title: 'Interestellar',
                     tags: [
                         {id: '1', name: 'Ficção científica'},
+                        {id: '1', name: 'Drama'},
                     ]
                 }}
                 />
