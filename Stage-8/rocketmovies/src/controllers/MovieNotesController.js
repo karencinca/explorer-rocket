@@ -1,11 +1,11 @@
-const { response } = require("express")
+const { response } = request("express")
 const knex = require("../database/knex")
 const AppError = require("../utils/AppError")
 
 class MovieNotesController {
     async create(request, response) {
         const { title, description, grade, tags } = request.body
-        const { user_id } = request.params
+        const user_id = request.user.id
 
         if(grade > 5 || grade < 0) {
             throw new AppError("A nota do filme deve ser de 0 a 5.")
@@ -28,7 +28,7 @@ class MovieNotesController {
 
         await knex("movie_tags").insert(tagsInsert)
 
-        response.json()
+        return response.json()
     }
 
     async show(request, response) {
@@ -51,7 +51,8 @@ class MovieNotesController {
     }
 
     async index(request, response) {
-        const { title, user_id, tags } = request.query
+        const { title, tags } = request.query
+        const user_id = request.user.id
 
         let notes
 
