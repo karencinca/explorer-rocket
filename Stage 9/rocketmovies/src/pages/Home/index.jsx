@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Container, Content, ContentTitle } from "./styles"
 import { Link } from 'react-router-dom'
 import { BsPlusLg } from 'react-icons/bs'
