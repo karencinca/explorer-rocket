@@ -1,8 +1,11 @@
 import { Container, Profile } from './styles'
 import { Input } from '../Input'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../../hooks/auth'
 
 export function Header() {
+    const { signOut } = useAuth()
+
     return (
         <Container>
             <Link to="/">
@@ -15,12 +18,14 @@ export function Header() {
             </div>
             
 
-            <Profile to="/profile">
+            <Profile>
                 <div>
-                    <span className='name'>Karen Cinca</span>
-                    <span>sair</span>
+                    <Link to="/profile" className='name'>Karen Cinca</Link>
+                    <span onClick={signOut}>sair</span>
                 </div>
-                    <img src="https://github.com/karencinca.png" alt="Imagem do usuário" />
+                    <Profile to="/profile">
+                        <img className='logoImg' src="https://github.com/karencinca.png" alt="Imagem do usuário" />
+                    </Profile>
             </Profile>
         </Container>
     )
