@@ -1,5 +1,6 @@
 import { Container, Content, GoBack, Stars } from "./styles";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { BsArrowLeft} from 'react-icons/bs'
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
@@ -13,7 +14,16 @@ import { Button } from "../../components/Button";
 export function Details() {
     const [data, setData] = useState([])
     const params = useParams()
+    const navigate = useNavigate()
 
+    async function handleRemove() {
+        const confirm = window.confirm(`Deseja realmente remover ${data.title}?`)
+
+        if(confirm) {
+            await api.delete(`/movie_notes/${params.id}`)
+            navigate(-1)
+        }
+    }
 
     useEffect(() => {
         async function fetchMovie() {
@@ -70,6 +80,7 @@ export function Details() {
                     id="delete" 
                     type="button"
                     title="Excluir filme"
+                    onClick={handleRemove}
                     />
             </Content>
 

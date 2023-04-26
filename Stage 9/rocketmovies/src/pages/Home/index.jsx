@@ -42,6 +42,7 @@ export function Home() {
             <Content>
                 
                 {
+                    movieNotes && 
                     movieNotes.map(movieNote => (
                         <Movie key={String(movieNote.id)} 
                         onClick={() => handleDetails(movieNote.id)}
