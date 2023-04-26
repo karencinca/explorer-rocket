@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../../hooks/auth'
 import { api } from '../../services/api'
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
+import { useState } from 'react'
 
 export function Header() {
+    const [search, setSearch] = useState("")
+
     const { signOut, user } = useAuth()
 
     const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
@@ -18,7 +21,11 @@ export function Header() {
             
 
             <div className='inputbar'>
-              <Input placeholder="Pesquisar pelo título" />  
+              <Input 
+              placeholder="Pesquisar pelo título" 
+              onChange={(e) => setSearch(e.target.value)}
+              value={search}
+              />  
             </div>
             
 

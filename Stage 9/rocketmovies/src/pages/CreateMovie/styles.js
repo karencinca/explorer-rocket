@@ -63,11 +63,6 @@ export const Content = styled.div`
         display: flex;
         gap: 40px;
         margin: 40px 0;
-
-        > :first-child {
-            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
-            color: ${({ theme }) => theme.COLORS.PINK};
-        }
     }
 
     :last-child {

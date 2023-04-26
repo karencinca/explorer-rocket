@@ -6,6 +6,7 @@ export const Container = styled.div`
     padding: 32px;
     margin-bottom: 24px;
     width: 100%;
+    cursor: pointer;
 
 
     .title {

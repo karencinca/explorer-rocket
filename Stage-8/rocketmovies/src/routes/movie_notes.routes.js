@@ -10,7 +10,7 @@ const movieNotesController = new MovieNotesController()
 
 movieNotesRoutes.use(ensureAuthenticated)
 
-movieNotesRoutes.post("", movieNotesController.create)
+movieNotesRoutes.post("/", movieNotesController.create)
 movieNotesRoutes.get("/:id", movieNotesController.show)
 movieNotesRoutes.get("/", movieNotesController.index)
 movieNotesRoutes.delete("/:id", movieNotesController.delete)

@@ -71,6 +71,11 @@ export const Content = styled.div`
         margin-bottom: 80px;
     }
 
+    Button {
+            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
+            color: ${({ theme }) => theme.COLORS.PINK};
+        }
+
 `
 
 export const Stars = styled.div`

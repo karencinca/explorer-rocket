@@ -21,6 +21,9 @@ export function CreateMovie() {
     const navigate = useNavigate()
 
     function handleAddTag() {
+        if(!newTag) {
+            return alert("Informe um marcador")
+        }
         setTags(prevState => [...prevState, newTag])
         setNewTag("")
     }
@@ -114,12 +117,6 @@ export function CreateMovie() {
                 </Markers>
 
                 <div className="buttons">
-                    <Button
-                    id="delete" 
-                    type="button"
-                    title="Excluir filme"
-                    />
-
                     <Button 
                     type="button"
                     title="Salvar alterações"

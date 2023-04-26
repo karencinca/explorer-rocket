@@ -65,8 +65,8 @@ class MovieNotesController {
                 "movie_notes.user_id",
             ])
             .where("movie_notes.user_id", user_id)
-            .whereLike("movie_notes.title", `%${title}%`)
-            .whereIn("name", filterTags)
+            .whereLike("title", `%${title}%`)
+            .whereIn("tags.name", filterTags)
             .innerJoin("movie_notes", "movie_notes.id", "movie_tags.note_id")
             .orderBy("movie_notes.title")
 
