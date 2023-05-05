@@ -39,7 +39,7 @@ export function Home() {
             
             <ContentTitle>
                 <span>Meus filmes</span>
-                <Link to="createmovie">
+                <Link to="addmovie">
                     <Button 
                         icon={BsPlusLg}
                         title="Adicionar filme"

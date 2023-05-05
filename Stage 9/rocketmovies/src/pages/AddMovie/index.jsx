@@ -6,12 +6,11 @@ import { Button } from '../../components/Button'
 import { ButtonText } from '../../components/ButtonText'
 import { Input } from "../../components/Input";
 import { Tags } from "../../components/Tags";
-import { Tag } from "../../components/Tag";
 import { api } from "../../services/api";
 import { useNavigate } from "react-router-dom";
-import { TagAddMovie } from "../../components/TagAddMovie";
+import { AddTagMovie } from "../../components/AddTagMovie";
 
-export function CreateMovie() {
+export function AddMovie() {
     const [title, setTitle] = useState("")
     const [grade, setGrade] = useState("")
     const [description, setDescription] = useState("")
@@ -101,14 +100,14 @@ export function CreateMovie() {
                 <Tags>
                     {
                         tags.map((tag, index) => (
-                            <Tag 
+                            <AddTagMovie 
                             key={String(index)}
                             value={tag}
                             onClick={() => handleRemoveTag(tag)}
                             />
                         ))
                     }
-                    <TagAddMovie 
+                    <AddTagMovie 
                     isNew 
                     placeholder="Novo marcador" 
                     onChange={e => setNewTag(e.target.value)}

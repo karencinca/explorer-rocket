@@ -2,7 +2,7 @@ import { FiPlus, FiX } from 'react-icons/fi'
 
 import { Container } from './styles'
 
-export function TagAddMovie({ isNew, value, onClick, ...rest }) {
+export function AddTagMovie({ isNew, value, onClick, ...rest }) {
     return (
         <Container isNew={isNew}>
             <input 
