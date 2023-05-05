@@ -11,6 +11,7 @@ import { api } from "../../services/api";
 import { Button } from "../../components/Button";
 import { useAuth } from "../../hooks/auth";
 import { Rate } from "../../components/Rate";
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
 export function Details() {
     const [data, setData] = useState([])
@@ -18,8 +19,10 @@ export function Details() {
     const { user } = useAuth()
     const navigate = useNavigate()
 
+    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
+
     async function handleRemove() {
-        const confirm = window.confirm(`Deseja realmente remover ${data.title}?`)
+        const confirm = window.confirm(`Deseja realmente remover "${data.title}"?`)
 
         if(confirm) {
             await api.delete(`/movie_notes/${params.id}`)
@@ -31,7 +34,6 @@ export function Details() {
         async function fetchMovie() {
             const response = await api.get(`/movie_notes/${params.id}`)
             setData(response.data)
-            console.log(response.data)
         }
 
         fetchMovie()
@@ -56,7 +58,7 @@ export function Details() {
                 </div>
 
                 <div className="author">
-                    <img src="https://github.com/karencinca.png" alt="" />
+                    <img src={avatarUrl} alt={user.name} />
                     <span>Por {user.name}</span>
 
                     <TbClockHour3 />

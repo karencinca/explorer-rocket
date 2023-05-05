@@ -1,6 +1,6 @@
 import { Container, Content } from "./styles";
 
-export function Markers({ children }) {
+export function Tags({ children }) {
     return (
         <Container>
             <h3>Marcadores</h3>

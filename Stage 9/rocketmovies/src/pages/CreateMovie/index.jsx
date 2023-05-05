@@ -5,10 +5,11 @@ import { Header } from '../../components/Header'
 import { Button } from '../../components/Button'
 import { ButtonText } from '../../components/ButtonText'
 import { Input } from "../../components/Input";
-import { Markers } from "../../components/Markers";
-import { Marker } from "../../components/Marker";
+import { Tags } from "../../components/Tags";
+import { Tag } from "../../components/Tag";
 import { api } from "../../services/api";
 import { useNavigate } from "react-router-dom";
+import { TagAddMovie } from "../../components/TagAddMovie";
 
 export function CreateMovie() {
     const [title, setTitle] = useState("")
@@ -97,24 +98,24 @@ export function CreateMovie() {
                 onChange={e => setDescription(e.target.value)}>
                 </textarea>
 
-                <Markers>
+                <Tags>
                     {
                         tags.map((tag, index) => (
-                            <Marker 
+                            <Tag 
                             key={String(index)}
                             value={tag}
                             onClick={() => handleRemoveTag(tag)}
                             />
                         ))
                     }
-                    <Marker 
+                    <TagAddMovie 
                     isNew 
                     placeholder="Novo marcador" 
                     onChange={e => setNewTag(e.target.value)}
                     value={newTag}
                     onClick={handleAddTag}
                     />
-                </Markers>
+                </Tags>
 
                 <div className="buttons">
                     <Button 
