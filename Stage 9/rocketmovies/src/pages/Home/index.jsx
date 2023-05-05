@@ -7,9 +7,11 @@ import { Button } from "../../components/Button"
 import { Header } from "../../components/Header"
 import { Movie } from '../../components/Movie'
 import { api } from '../../services/api'
+import { Input } from '../../components/Input'
 
 export function Home() {
     const [movieNotes, setMovieNotes] = useState([])
+    const [search, setSearch] = useState("")
     const navigate = useNavigate()
 
     function handleDetails(id) {
@@ -18,17 +20,23 @@ export function Home() {
 
     useEffect(() => {
         async function fetchMovies() {
-            const response = await api.get(`movie_notes?title&tags"`)
-            setMovieNotes(response.data) 
+            const response = await api.get(`movie_notes?title=${search}`)
+            setMovieNotes(response.data)
         }
 
         fetchMovies()
-    }, [])
+    }, [search])
 
     return (
         <Container>
-            <Header />
+            <Header> 
+                <Input 
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Pesquisar pelo título"
+                />
+            </Header>
 
+            
             <ContentTitle>
                 <span>Meus filmes</span>
                 <Link to="createmovie">
@@ -49,7 +57,8 @@ export function Home() {
                         data={{
                             title: movieNote.title,
                             tags: movieNote.tags,
-                            description: movieNote.description
+                            description: movieNote.description,
+                            grade: movieNote.grade
                         }}
                         />
                     ))

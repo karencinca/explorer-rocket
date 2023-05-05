@@ -1,7 +1,7 @@
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-import { Container, Stars } from "./styles";
+import { Container } from "./styles";
 import { Tag } from '../Tag'
+import { Rate } from '../Rate';
 
 export function Movie({ data, ...rest }) {
     return (
@@ -10,13 +10,7 @@ export function Movie({ data, ...rest }) {
                 <span className='title'>{data.title}</span>
             </Link>
             
-            <Stars>
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
-                <AiOutlineStar />  
-            </Stars>
+                <Rate data={data} />
 
             <p>
                 {data.description}

@@ -40,18 +40,15 @@ export const Profile = styled(Link)`
         flex-direction: column;
         margin-right: 9px;
         align-items: flex-end;
-
-        > p, span {
-            font-size: 14px;
-        }
-
+        
         > .name {
             font-weight: 700;
             color: ${({ theme }) => theme.COLORS.WHITE};
         }
-
-        > span {
+        
+        > .signout {
             color: ${({ theme }) => theme.COLORS.GRAY_100};
+            font-size: 14px;
         }
     }
 

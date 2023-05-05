@@ -77,11 +77,3 @@ export const Content = styled.div`
         }
 
 `
-
-export const Stars = styled.div`
-    color: ${({ theme }) => theme.COLORS.PINK};
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-`

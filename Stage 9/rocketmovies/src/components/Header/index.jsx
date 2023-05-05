@@ -4,11 +4,8 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../../hooks/auth'
 import { api } from '../../services/api'
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
-import { useState } from 'react'
 
-export function Header() {
-    const [search, setSearch] = useState("")
-
+export function Header({ children }) {
     const { signOut, user } = useAuth()
 
     const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
@@ -19,20 +16,14 @@ export function Header() {
                 <span className='logo'>RocketMovies</span>
             </Link>
             
-
             <div className='inputbar'>
-              <Input 
-              placeholder="Pesquisar pelo título" 
-              onChange={(e) => setSearch(e.target.value)}
-              value={search}
-              />  
+                {children}
             </div>
-            
 
             <Profile>
                 <div>
                     <Link to="/profile" className='name'>{user.name}</Link>
-                    <span onClick={signOut}>sair</span>
+                    <Link to="/" onClick={signOut} className='signout'>Sair</Link>
                 </div>
                     <Profile to="/profile">
                         <img src={avatarUrl} alt={user.name} />
